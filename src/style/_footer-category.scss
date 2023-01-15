@@ -1,0 +1,47 @@
+.footer-category {
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+
+    @include tablet {
+      flex-direction: column;   
+    }
+
+
+  }
+
+  &__item {
+
+  }
+
+  &__subtitle {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 10px;
+
+    @include tablet {
+      font-size: 12px;
+    }
+  }
+
+  &__sublist {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    @include tablet {
+      display: none;    
+    }
+
+  }
+
+  &__subitem {
+    font-size: 14px;
+  }
+
+
+}

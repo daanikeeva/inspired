@@ -1,0 +1,16 @@
+.footer-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 18px;
+
+  @include tablet {
+    gap: 21px;
+    font-size: 14px;
+  }
+
+  @include mobile {
+    gap: 9px;
+    font-size: 12px;
+  }
+}

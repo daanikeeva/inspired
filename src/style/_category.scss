@@ -1,0 +1,49 @@
+.category {
+  padding: 24px 0 12px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 692px;
+  gap: 15px;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+
+  @include tablet {
+    padding: 26px 0 5px;
+  }
+
+  @include mobile {
+    padding: 26px 0 5px;
+  }
+
+  &__link {
+    position: relative;
+
+    &:hover {
+      transition: color 0.3s ease-in-out;
+      color: $gray;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 26px;
+      height: 2px;
+      background-color: $main-color;
+      opacity: 0;
+    }
+
+    &_active {
+      pointer-events: none;
+
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+}
